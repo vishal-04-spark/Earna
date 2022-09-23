@@ -1,296 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+  <!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
-    <style>
-         *, *:before, *:after {
+   <!-- <title> Responsive Contact Us Form  | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/x-icon" href="assets\img\favicon.png">
+     <title>Contact Us</title>
+   </head>
+   <style>
+   /* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins" , sans-serif;
 }
- 
-body {
-  background: linear-gradient(to right, #036198 0%, #fffcfd 100%);
-  font-size: 12px;
-}
- 
-body, button, input {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-}
- 
-.background {
-  display: flex;
+body{
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
-}
- 
-.container {
-  flex: 0 2 800px;
-  margin: auto;
-  padding: 10px;
-}
- 
-.screen {
-  position: relative;
-  background: #504f4f;
-  border-radius: 15px;
-}
- 
-.screen:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-  z-index: -1;
-}
- 
-.screen-header {
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
-  background: #383838;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  justify-content: center;
 }
- 
-.screen-header-left {
-  margin-right: auto;
+.container{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
- 
-.screen-header-button {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 3px;
-  border-radius: 8px;
-  background: white;
-}
- 
-.screen-header-button.close {
-  background: #ed1c6f;
-}
- 
-.screen-header-button.maximize {
-  background: #e8e925;
-}
- 
-.screen-header-button.minimize {
-  background: #74c54f;
-}
- 
-.screen-header-right {
+.container .content{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
- 
-.screen-header-ellipsis {
-  width: 3px;
-  height: 3px;
-  margin-left: 2px;
-  border-radius: 8px;
-  background: #999;
-}
- 
-.screen-body {
-  display: flex;
-}
- 
-.screen-body-item {
-  flex: 1;
-  padding: 50px;
-}
- 
-.screen-body-item.left {
+.container .content .left-side{
+  width: 25%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-}
- 
-.app-title {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
   position: relative;
-  color: #ffffff;
-  font-size: 26px;
 }
- 
-.app-title:after {
+.content .left-side::before{
   content: '';
-  display: block;
   position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  color: #036198;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #036198;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #036198;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover{
   background: #036198;
 }
- 
-.app-contact {
-  margin-top: auto;
-  font-size: 8px;
-  color: #888;
-}
- 
-.app-form-group {
-  margin-bottom: 15px;
-}
- 
-.app-form-group.message {
-  margin-top: 40px;
-}
- 
-.app-form-group.buttons {
-  margin-bottom: 0;
-  text-align: right;
-}
- 
-.app-form-control {
-  width: 100%;
-  padding: 10px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid rgb(195, 195, 195);
-  color: #ddd;
-  font-size: 14px;
-  text-transform: uppercase;
-  outline: none;
-  transition: border-color .2s;
-}
- 
-.app-form-control::placeholder {
-  color: rgb(225, 225, 225);
-}
- 
-.app-form-control:focus {
-  border-bottom-color: #ddd;
-}
- 
-.app-form-button {
-  background: none;
-  border: none;
-  color: #036198;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-}
- 
-.app-form-button:hover {
-  color: #ffffff;
-}
- 
-.credits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  color: #0693e3;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-}
- 
-.credits-link {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
- 
-.dribbble {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-}
- 
-@media screen and (max-width: 520px) {
-  .screen-body {
-    flex-direction: column;
+
+@media (max-width: 950px) {
+  .container{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
   }
- 
-  .screen-body-item.left {
-    margin-bottom: 30px;
-  }
- 
-  .app-title {
-    flex-direction: row;
-  }
- 
-  .app-title span {
-    margin-right: 12px;
-  }
- 
-  .app-title:after {
-    display: none;
-  }
+  .container .content .right-side{
+   width: 75%;
+   margin-left: 55px;
 }
-@media screen and (max-width: 600px) {
-  .screen-body {
-    padding: 40px;
-  }
- 
-  .screen-body-item {
-    padding: 0;
-  }
 }
-    </style>
-</head>
+@media (max-width: 820px) {
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container .content{
+    flex-direction: column-reverse;
+  }
+ .container .content .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .container .content .left-side::before{
+   display: none;
+ }
+ .container .content .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+
+</style>
 <body>
-    <div class="background">
-        <div class="container">
-          <div class="screen">
-            <div class="screen-header">
-              <div class="screen-header-left">
-                <div class="screen-header-button close"></div>
-                <div class="screen-header-button maximize"></div>
-                <div class="screen-header-button minimize"></div>
-              </div>
-              <div class="screen-header-right">
-                <div class="screen-header-ellipsis"></div>
-                <div class="screen-header-ellipsis"></div>
-                <div class="screen-header-ellipsis"></div>
-              </div>
-            </div>
-            <div class="screen-body">
-              <div class="screen-body-item left">
-                <div class="app-title">
-                  <span>CONTACT</span>
-                  <span>US</span>
-                </div>
-                <div class="app-contact">CONTACT INFO : +92 333 0000</div>
-              </div>
-              <div class="screen-body-item">
-                <div class="app-form">
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="NAME" value="">
-                  </div>
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="EMAIL">
-                  </div>
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="CONTACT NO">
-                  </div>
-                  <div class="app-form-group message">
-                    <input class="app-form-control" placeholder="TELL US">
-                  </div>
-                  <div class="app-form-group buttons">
-                    <button class="app-form-button">CANCEL</button>
-                    <button class="app-form-button">SEND</button>
-                </div>
-            </div>
-          </div>
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">5919 Trussville Crossings Pkwy, </div>
+          <div class="text-two">Birmingham</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+0098 9893 5647</div>
+          <div class="text-two">+0096 3434 5678</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">abcd@gmail.com</div>
+          <div class="text-two">example@gmail.com</div>
         </div>
       </div>
-   
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name">
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email">
+        </div>
+        <div class="input-box message-box">
+          <input type="texarea" placeholder="Enter Your Comments">
+        </div>
+        <div class="button">
+          <input type="button" value="Send Now" >
+        </div>
+      </form>
+    </div>
     </div>
   </div>
+</body>
+</html>
+
 </body>
 </html>
